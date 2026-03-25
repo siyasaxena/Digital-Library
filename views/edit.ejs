@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Edit your book</h2>
+    <p>Book id : <%= book.id %></p>
+    <p>Book title : <%= book.title %></p>
+    <form method="post" action="/books/<%= book.id %>?_method=PATCH">
+      <textarea name="status"><%= book.status %></textarea>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

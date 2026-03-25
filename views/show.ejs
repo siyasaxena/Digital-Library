@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= book.title %> - Details</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header style="text-align: center; margin-top: 20px">
+      <h2>Book Details</h2>
+      <p style="color: gray; font-size: 0.8em">ID: <%= book.id %></p>
+    </header>
+
+    <main style="display: flex; justify-content: center; margin-top: 30px">
+      <div class="book">
+        <img
+          src="<%= book.image %>"
+          alt="Book Cover"
+          style="width: 100%; border-radius: 4px"
+        />
+
+        <h3 class="title"><%= book.title %></h3>
+        <p class="author"><strong>By:</strong> <%= book.author %></p>
+        <p class="genre"><strong>Genre:</strong> <%= book.genre %></p>
+        <p class="status"><strong>Status:</strong> <%= book.status %></p>
+
+        <hr />
+        <a href="/books" style="text-decoration: none; color: blue"
+          >← Back to Library</a
+        >
+      </div>
+    </main>
+  </body>
+</html>
